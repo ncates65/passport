@@ -541,3 +541,17 @@ export default function PassportApp() {
                     Next <ChevronRight className="w-4 h-4" />
                   </Button>
                 </div>
+              </div>
+            </Card>
+            
+            <div className="mt-6 text-center text-xs text-slate-400">
+              Disclaimer: This app is a guide and not an official government tool. 
+              Always verify details at travel.state.gov.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  );
+}
