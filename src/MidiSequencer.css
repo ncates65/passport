@@ -1,0 +1,103 @@
+/* Custom styles for mobile-first design and aesthetics */
+/* Adapted from the provided HTML style block */
+
+.card {
+    background-color: #2a2a47; /* Slightly lighter card */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.play-button, .generate-button {
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.play-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(135, 206, 250, 0.4); /* Sky blue hover glow */
+}
+
+.disabled-button {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Sequencer Grid Styling */
+.sequencer-grid {
+    display: grid;
+    grid-template-columns: auto repeat(16, 1fr); /* Pitch label + 16 quarter-note columns */
+    gap: 1px;
+    border: 1px solid #3e3e6f;
+}
+
+.pitch-label {
+    color: #ccc;
+    padding: 4px 4px;
+    text-align: right;
+    font-size: 11px;
+    line-height: 1.5;
+    height: 24px;
+    user-select: none;
+    /* Sticky positioning handled in CSS or inline style */
+    position: sticky;
+    left: 0;
+    z-index: 10;
+}
+
+/* Scale visualization */
+.in-scale-bg {
+    background-color: #3e3e6f;
+    font-weight: bold;
+    color: #fff;
+}
+
+.not-in-scale-bg {
+    background-color: #24243d;
+    color: #5a5a8f;
+}
+
+.in-scale-bg.black-key {
+    background-color: #4a4a75;
+}
+
+.not-in-scale-bg.black-key {
+    background-color: #1d1d2b;
+}
+
+.grid-cell {
+    height: 24px;
+}
+
+.grid-cell-alt {
+    /* Alternative background for grid cells that are not black keys and in odd columns */
+    /* Handled via inline styles or utility classes in React */
+}
+
+.note-block {
+    position: absolute;
+    background-color: #87cefa; /* Sky blue note color */
+    height: 24px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.1s;
+    z-index: 20;
+}
+
+.highlight-bar {
+    background-color: rgba(135, 206, 250, 0.2); /* Light blue transparency for playhead */
+    transition: background-color 0.1s;
+}
+
+.highlight-note {
+    background-color: #4a90e2; /* Deeper blue for playing note */
+}
+
+/* Input error */
+.input-error {
+    border-color: #f87171 !important;
+}
+
+/* Ensure inputs are easy to tap */
+input[type="text"], input[type="number"], select {
+    padding-top: 0.65rem !important;
+    padding-bottom: 0.65rem !important;
+}

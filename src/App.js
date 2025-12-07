@@ -1,9 +1,9 @@
 import React from 'react';
-import PassportApp from './PassportApp';
+import MidiSequencer from './MidiSequencer';
 
 function App() {
   return (
-    <PassportApp />
+    <MidiSequencer />
   );
 }
 
