@@ -1,9 +1,11 @@
 import React from 'react';
-import PassportApp from './PassportApp';
+// import PassportApp from './PassportApp';
+import MelodyGenerator from './MelodyGenerator';
 
 function App() {
   return (
-    <PassportApp />
+    // <PassportApp />
+    <MelodyGenerator />
   );
 }
 
